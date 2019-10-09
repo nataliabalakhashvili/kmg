@@ -1,0 +1,90 @@
+@import "variables"
+@import "mixins"
+
+*
+	margin 0
+	padding 0
+	list-style-type none
+	outline none
+	font-family helvetica75
+	
+@font-face{
+    font-family helvetica45
+    src url(../fonts/HelveticaNeueLTGEOW82-45Lt-Regular.woff)
+}
+@font-face{
+    font-family helvetica65
+    src url(../fonts/HelveticaNeueLTGEOW82-65Md.woff)
+}
+@font-face{
+    font-family helvetica75
+    src url(../fonts/HelveticaNeueLTGEOW82-75Bd.woff)
+}
+nav
+	background transparent
+	box-shadow none
+	width auto
+	li
+		line-height
+		&:hover 
+			a
+				background transparent
+	ul
+		li.active
+			background transparent
+		a
+			padding 0	
+			line-height 20px
+
+.container{
+	max-width 1240px
+	padding 0 20px
+	width calc(100% - 20px)
+	box-sizing border-box
+	+mq(1200px){
+		max-width 992px
+	}
+	+mq(992px){
+		max-width 800px
+	}
+	+mq(600px){
+		padding 0 10px
+	}
+}
+.clear{
+	clear both
+}
+button:focus{
+	background-color transparent
+}
+input:not([type]):focus:not([readonly]), 
+input[type=text]:not(.browser-default):focus:not([readonly]), 
+input[type=password]:not(.browser-default):focus:not([readonly]), 
+input[type=email]:not(.browser-default):focus:not([readonly]), 
+input[type=url]:not(.browser-default):focus:not([readonly]), 
+input[type=time]:not(.browser-default):focus:not([readonly]), 
+input[type=date]:not(.browser-default):focus:not([readonly]), 
+input[type=datetime]:not(.browser-default):focus:not([readonly]), 
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]), 
+input[type=tel]:not(.browser-default):focus:not([readonly]), 
+input[type=number]:not(.browser-default):focus:not([readonly]), 
+input[type=search]:not(.browser-default):focus:not([readonly]), 
+textarea.materialize-textarea:focus:not([readonly]){
+    border-bottom: 1px solid red;
+    -webkit-box-shadow: 0 1px 0 0 transparent;
+    box-shadow: 0 1px 0 0 transparent;
+}
+.select-wrapper input.select-dropdown,
+input:not([type]), 
+.owl-theme .owl-nav
+	margin-top 0
+.row,
+.container .row
+	margin 0 -17px
+.row .col
+	padding 0 17px
+.input-field
+	margin-top 0
+.dropdown-content li>a, .dropdown-content li>span
+	color #707070
+	font-weight normal
